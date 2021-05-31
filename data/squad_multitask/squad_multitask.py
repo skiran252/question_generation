@@ -73,8 +73,8 @@ class SquadMultitask(nlp.GeneratorBasedBuilder):
     """SQUAD: The Stanford Question Answering Dataset. Version 1.1."""
 
     _URL = "https://rajpurkar.github.io/SQuAD-explorer/dataset/"
-    _DEV_FILE = "dev-v1.1.json"
-    _TRAINING_FILE = "train-v1.1.json"
+    _DEV_FILE = "dev_ensemble.json"
+    _TRAINING_FILE = "train_ensemble.json"
 
     BUILDER_CONFIGS = [
         SquadMultitaskConfig(
@@ -105,14 +105,14 @@ class SquadMultitask(nlp.GeneratorBasedBuilder):
 
     def _split_generators(self, dl_manager):
         urls_to_download = {
-            "train": os.path.join(self._URL, self._TRAINING_FILE),
-            "dev": os.path.join(self._URL, self._DEV_FILE),
+            "train": os.path.join("/root/question_generation/", self._TRAINING_FILE),
+            "dev": os.path.join("/root/question_generation/", self._DEV_FILE),
         }
-        downloaded_files = dl_manager.download_and_extract(urls_to_download)
+        # downloaded_files = dl_manager.download_and_extract(urls_to_download)
 
         return [
-            nlp.SplitGenerator(name=nlp.Split.TRAIN, gen_kwargs={"filepath": downloaded_files["train"]}),
-            nlp.SplitGenerator(name=nlp.Split.VALIDATION, gen_kwargs={"filepath": downloaded_files["dev"]}),
+            nlp.SplitGenerator(name=nlp.Split.TRAIN, gen_kwargs={"filepath": urls_to_download["train"]}),
+            nlp.SplitGenerator(name=nlp.Split.VALIDATION, gen_kwargs={"filepath": urls_to_download["dev"]}),
         ]
     
     def _get_correct_alignement(self, context, answer):
