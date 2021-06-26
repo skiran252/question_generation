@@ -73,8 +73,8 @@ class SquadMultitask(nlp.GeneratorBasedBuilder):
     """SQUAD: The Stanford Question Answering Dataset. Version 1.1."""
 
     _URL = "data"
-    _DEV_FILE = "eval_ST.json"
-    _TRAINING_FILE = "train_ST.json"
+    _DEV_FILE = "eval_STQ.json"
+    _TRAINING_FILE = "train_STQ.json"
 
     BUILDER_CONFIGS = [
         SquadMultitaskConfig(

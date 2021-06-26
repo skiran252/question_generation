@@ -35,14 +35,14 @@
         "splits": {
             "train": {
                 "name": "train",
-                "num_bytes": 495516902,
-                "num_examples":129682,
+                "num_bytes": 701976747,
+                "num_examples": 213250,
                 "dataset_name": "squad_trivia"
             },
             "validation": {
                 "name": "validation",
-                "num_bytes": 62493527,
-                "num_examples":  15433,
+                "num_bytes": 82668216,
+                "num_examples":  22787,
                 "dataset_name": "squad_trivia"
             }
         }
@@ -83,14 +83,14 @@
         "splits": {
             "train": {
                 "name": "train",
-                "num_bytes": 495516902,
-                "num_examples":129682,
+                "num_bytes": 701976747,
+                "num_examples":213250,
                 "dataset_name": "squad_trivia"
             },
             "validation": {
                 "name": "validation",
-                "num_bytes": 62493527,
-                "num_examples": 15433,
+                "num_bytes": 82668216,
+                "num_examples": 22787,
                 "dataset_name": "squad_trivia"
             }
         }
@@ -131,14 +131,14 @@
         "splits": {
             "train": {
                 "name": "train",
-                "num_bytes": 495516902,
-                "num_examples":129682,
+                "num_bytes": 701976747,
+                "num_examples":213250,
                 "dataset_name": "squad_trivia"
             },
             "validation": {
                 "name": "validation",
-                "num_bytes": 62493527,
-                "num_examples": 15433,
+                "num_bytes": 82668216,
+                "num_examples": 22787,
                 "dataset_name": "squad_trivia"
             }
         }

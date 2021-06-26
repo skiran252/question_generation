@@ -1,14 +1,14 @@
 python run_qg.py \
-    --model_name_or_path t5-base-qg-hl \
+    --model_name_or_path t5-base \
     --model_type t5 \
     --tokenizer_name_or_path t5_qg_tokenizer \
-    --output_dir t5-base-qg-hl-1 \
+    --output_dir t5-base-qg-hl \
     --train_file_path data/train_data_e2e_qg_t5.pt \
     --valid_file_path data/valid_data_e2e_qg_t5.pt \
     --per_device_train_batch_size 10 \
     --per_device_eval_batch_size 10 \
     --gradient_accumulation_steps 8 \
-    --learning_rate 1e-5 \
+    --learning_rate 3e-4 \
     --num_train_epochs 2 \
     --seed 42 \
     --do_train \
