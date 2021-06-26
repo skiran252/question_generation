@@ -155,7 +155,6 @@ def main():
     import pandas as pd
     pd.DataFrame(train_dataset).to_csv("train_qg.json")
     pd.DataFrame(valid_dataset).to_csv("eval_qg.json")
-    print(len(train_dataset),train_dataset[0])
     processor = DataProcessor(
         tokenizer,
         model_type=data_args.model_type,

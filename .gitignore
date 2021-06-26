@@ -1,2 +1,6 @@
 *.pt
 __pycache__
+t5-base-qg-hl
+*.json
+T5_MOCHA_2
+wandb
